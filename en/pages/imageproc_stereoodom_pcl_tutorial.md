@@ -25,12 +25,10 @@ rosparam set /use_sim_time true
 then play the file
 
 ```bash
-rosbag play filename.bag
+rosbag play filename.bag --clock
 ```
 
-## 2. Start the image stereo proc
-
-Note: this and further commands assume that the image are published as /stereo/left/image_raw and /stereo/right/image_raw
+## 2. Start the image proc
 
 ```bash
 ROS_NAMESPACE=/stereo rosrun stereo_image_proc stereo_image_proc
@@ -79,22 +77,26 @@ from time import sleep
 
 JOINT_STATE_TOPIC='/rover_amalia/joint_states'
 
-br1 = tf.TransformBroadcaster()
-br2 = tf.TransformBroadcaster()
+broadcasters = map(tf.TransformBroadcaster, range(0,3))
 
 def publish_tf():
-    v = (0, 0, 0)
-    q1 = tf.transformations.quaternion_from_euler(0, 0, 0)
-    q = q1 
-    br1.sendTransform(v,
-                    q,
+    vec3_zero = (0, 0, 0)
+    quat_zero = tf.transformations.quaternion_from_euler(0, 0, 0)
+    broadcasters[0].sendTransform(
+                    vec3_zero,
+                    quat_zero,
                     rospy.Time.now(),
                     "odom",
                     "map")
-    q1 = tf.transformations.quaternion_from_euler(np.pi*3/2, 0, np.pi*3/2)
-    q = q1 
-    br2.sendTransform(v,
-                    q,
+    broadcasters[1].sendTransform(
+                    vec3_zero,
+                    quat_zero,
+                    rospy.Time.now(),
+                    "base_link",
+                    "odom")
+    broadcasters[2].sendTransform(
+                    vec3_zero,
+                    tf.transformations.quaternion_from_euler(np.pi*3/2, 0, np.pi*3/2),
                     rospy.Time.now(),
                     "stereo",
                     "base_link")

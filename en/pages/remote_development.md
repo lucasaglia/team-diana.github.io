@@ -1,5 +1,17 @@
 # Remote development
 
+## Share network connection
+
+we can share a network connection when a computer **A** is connected to internet and another one **B** is connected to **A** but not to the internet
+
+Both **A** and **B** must be capable to ping each other. After you verified this, follow this guide:
+
+https://wiki.archlinux.org/index.php/Internet_sharing
+
+important, try to wget an ip address instead of an hostname since dns may not work. 
+
+Eventually you also have to configure **B** connection in order to make dns resolution work
+
 ## Unison
 
 unison is a tool that allows to sync two directory, one on your local computer, one on the remote computer (rover), updating their content in both direction.

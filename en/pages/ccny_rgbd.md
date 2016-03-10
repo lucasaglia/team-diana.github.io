@@ -47,6 +47,10 @@ Moreover the SR4500 already provides the distance variance!
 
 1. fix how Z variance is evaluate
 2. ignore non valid points in the amplitude and depth image
+3. Check unit of measure
+4. Check all TODO in code
+5. try to set motion constraint (z=0)
+6. Use generate service than resolve path service
 
 ## How to run it: 
 

@@ -79,6 +79,7 @@
   * [Scripts](pages/scripts.md)
   * [Remote ROS connection](pages/remote.md)
   * [Remote development](pages/remote_development.md)
+  * [Useful stuff](pages/useful_stuff.md)
   - - - -
   * # Tools
   * [RViz](pages/rviz.md)
