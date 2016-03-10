@@ -4,6 +4,11 @@
 
 we can share a network connection when a computer **A** is connected to internet and another one **B** is connected to **A** but not to the internet
 
+it is done by configuring the ip addresses of both **A** and **B** and by setting up iptables
+
+make sure also to enable ip_forwarding
+
+
 Both **A** and **B** must be capable to ping each other. After you verified this, follow this guide:
 
 https://wiki.archlinux.org/index.php/Internet_sharing
@@ -11,6 +16,16 @@ https://wiki.archlinux.org/index.php/Internet_sharing
 important, try to wget an ip address instead of an hostname since dns may not work. 
 
 Eventually you also have to configure **B** connection in order to make dns resolution work
+make sure that these servers:
+
+```
+nameserver 130.192.3.103
+nameserver 130.192.3.24
+nameserver 130.192.3.21
+```
+
+appear in */etc/resolv.conf**
+
 
 ## Unison
 

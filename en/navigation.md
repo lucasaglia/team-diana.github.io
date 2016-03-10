@@ -25,6 +25,7 @@
 
   * [Rover](pages/amalia_rover.md)
   * [Hardware](pages/hardware.md)
+  * [Misc Hardware](pages/other_hardware.md)
 
 [Subsystems]()
 
