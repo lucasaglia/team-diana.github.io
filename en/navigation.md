@@ -27,6 +27,12 @@
   * [Hardware](pages/hardware.md)
   * [Misc Hardware](pages/other_hardware.md)
 
+[T0-R0 Rover]()
+
+  * [Rover](pages/t0r0_rover.md)
+  * [Hardware](pages/t0r0-hardware.md)
+  * [Software](pages/t0r0-software.md)
+
 [Subsystems]()
 
   * # IO
@@ -96,6 +102,7 @@
 
   * [Website](http://teamdiana.org/)
   * [Status](pages/status.md)
+  * [Server Status](pages/server_status.md)
   * [Getting Started](pages/getting_started.md)
   * [Roadmap](pages/roadmap.md)
   * [Accounts](pages/accounts.md)

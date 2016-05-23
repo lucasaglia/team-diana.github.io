@@ -24,7 +24,9 @@ nameserver 130.192.3.24
 nameserver 130.192.3.21
 ```
 
-appear in */etc/resolv.conf**
+appear in */etc/resolv.conf*
+
+the **udoo quad** board assumes that the A computer has 192.168.1.12 as ip address (the default route is 192.168.1.12 )
 
 
 ## Unison
