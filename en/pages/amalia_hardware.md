@@ -1,4 +1,4 @@
-# Hardware
+# Amalia Hardware
 
 ## cPCI boards
 ---

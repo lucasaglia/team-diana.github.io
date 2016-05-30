@@ -24,14 +24,14 @@
 [Amalia Rover]()
 
   * [Rover](pages/amalia_rover.md)
-  * [Hardware](pages/hardware.md)
+  * [Hardware](pages/amalia_hardware.md)
   * [Misc Hardware](pages/other_hardware.md)
 
 [T0-R0 Rover]()
 
   * [Rover](pages/t0r0_rover.md)
-  * [Hardware](pages/t0r0-hardware.md)
-  * [Software](pages/t0r0-software.md)
+  * [Hardware](pages/t0r0_hardware.md)
+  * [Software](pages/t0r0_software.md)
 
 [Subsystems]()
 
@@ -73,6 +73,7 @@
 
 [Infrastructure]()
 
+  * [Tutorial NOVA](pages/nova_tutorials.md)
   * [Rover first setup](pages/rover_first_setup.md)
   * [Learning](pages/learning.md)
   - - - -

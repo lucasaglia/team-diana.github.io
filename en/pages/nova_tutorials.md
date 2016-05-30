@@ -1,0 +1,40 @@
+# Tutorials NOVA
+
+## 1) Create a new workspace
+
+- Make sure you have already loaded nova environment variables (using *source WORKSPACE/setup.sh*)
+
+- Create and enter in a new directory, we call it *example-ws*
+
+```bash
+mkdir example-ws
+cd example-ws
+```
+
+- Initialize the workspace: 
+
+```bash
+CoreWorkspace.py initialize
+```
+
+- Now these file and directories should appear inside the *example-ws* directory:
+
+```bash
+./WORKSPACE.json
+./setup.sh
+./generated
+./generated/packages
+./generated/modules
+./build
+./sources
+./sources/targets
+./sources/packages
+```
+
+- Let's add a module
+
+```bash
+CoreWorkspace.py module add stepper 'trial'
+CoreWorkspace.py generate
+```
+
