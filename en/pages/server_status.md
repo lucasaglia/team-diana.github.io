@@ -12,6 +12,8 @@ rpi2:
 ssh USERNAME@rover.teamdiana.org 
 ```
 
+An FTP server is hosted on rpi2. More information available [here](ftp_server_status.md)
+
 ## TK1
 
 A Jetson TK-1 devkit. This server will be the heart of the T0-R0 rover. 

@@ -6,15 +6,45 @@
 
 - Linux (preferably ubuntu, but others are fine too)
 - Eclipse (preferably CDT version, downloadable [here](http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/mars2) )
+- **GNU ARM Eclipse** tools, downloadable from **Eclipse marketplace**
 * Python and some python packages
+* Texane STlink tool
+* Other tools (cmake)
+
 
 #### Python packages installation
 
 ```bash
 # commands for ubuntu
-sudo apt-get install pip 
+sudo apt-get install python-pip 
 sudo pip install argcomplete gitpython colorama avro tabulate
 ```
+
+****  Texane STlink tool
+
+```bash
+sudo apt-get install git libusb-1.0-0 libusb-1.0-0-dev cmake
+git clone https://github.com/texane/stlink.git
+cd stlink
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+cd ..
+sudo cp etc/udev/rules.d/* /etc/udev/rules.d/
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```
+
+
+#### other packages installation
+
+```bash
+# commands for ubuntu
+sudo apt-get install cmake
+```
+
 
 ### Setup Nova tools 
 
@@ -24,14 +54,18 @@ Read the [docs for more details](http://docs.novalabs.io)
 A pre-created, ready to use, compressed directory was created in order to speed up the setup process. Follow [Setup Nova tools - A](#Setup_Nova_tools_A) in order to use the compressed 
 directory, otherwise follow [Setup Nova Tools - B](#Setup_Nova_tools_B)
 
+It is also possible to use the [prebuilt virtualbox image](nova_vbox_image.md). If you use the virtualbox image skip to [Create a new workspace](#Create_a_new_workspace)
+
+
 ### Setup Nova tools A
 
-Download the latest directory from google drive or from this [slack link](https://files.slack.com/files-pri/T0E2UUQ0M-F1AK4UTV1/download/nova-core-dist-20160520.tar.xz)
-Currently, the latest compressed directory is named *nova-core-dist-20160520.tar.xz*
+Download the latest directory from our [ftp_server](ftp://rover.teamdiana.org:2525/nova/)
+Currently, the latest compressed directory is named *nova-core-dist-20160616.tar.xz*
 In the terminal, uncompress it with:
 
 ```bash
-tar -xvf nova-core-dist-20160520.tar.xz
+# run this command where the file was downloaded. Change directory with cd
+tar -xvf nova-core-dist-20160616.tar.xz
 ```
 
 The execute the *gensetup.sh* script
@@ -58,6 +92,8 @@ Now let's create a workspace. The workspace contains your project code and confi
 
 **important:** Remember to load the *setup.sh* as specified above
 
+important: There are two *setup.sh* files: one is in the nova installation directory. This file is needed to load nova tools. Another file is in the workspace and is generated using the following commands. Remember that when you want to work in the workspace you need to load the *setup.sh* file **in the workspace**
+
 ```bash
 # Create a new directory for the workspace. This can be done everywhere
 mkdir workspace
@@ -78,6 +114,8 @@ they appear under the **MODULES** section.
 ### Add a module
 
 Let's add a **stepper** module for instance:
+
+In the workspace directory:
 
 ```bash
 # We are working in the workspace, so remember to source the setup.sh file
@@ -137,3 +175,6 @@ Note: Vcc pin must be connected to a 3.3V voltage source, preferably the left PI
 
 Note: **CN2** Jumpers must be off (not connected) 
 
+The 10-ping SWD Cortex header pins  on the board are similar to a **FFSD-05-D-12.00-01-N** connector. Two rows, 1.27mm pitch
+
+A compatible cable is	**FFSD-05-D-12.00-01-N**
