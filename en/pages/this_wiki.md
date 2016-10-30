@@ -8,6 +8,11 @@ The repository is avaiable [here on github](https://github.com/team-diana/team-d
 
 You can edit or write new pages with any text editor, then submit your changes with a pull request.
 
+## prose.io
+
+You can edit this wiki using [prose.io](http://prose.io)
+
+
 ## Markdown
 
 A reference of the markdown syntax can be found [here](http://daringfireball.net/projects/markdown/syntax)
@@ -71,6 +76,3 @@ If you are a javascript programmer, you can improve mdwiki resolving these issue
 
 - [Dynamic Gimmicks load #163](https://github.com/Dynalon/mdwiki/issues/163)
 - Make the markdown parser ignore mathjax expressions
-
-
-
