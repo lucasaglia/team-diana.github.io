@@ -63,6 +63,9 @@ cd build
 cmake ..
 make
 sudo make install
+sudo cp etc/udev/rules.d/* /etc/udev/rules.d/
+sudo udevadm control --reload-rules
+sudo udevadm trigger
 ```
 
 ## Creating a new workspace
