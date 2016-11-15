@@ -1,9 +1,6 @@
 # Nova Boards
 
-In order to develop on the Nova boards, the Nova Core tools must be
-properly installed and set up.  These tools allow you to create a new
-workspace, add/remove packages, configure the board.  Read
-the [docs for more details](http://docs.novalabs.io)
+In order to develop on the Nova boards, the Nova Core tools must be properly installed and set up.  These tools allow you to create a new workspace, add/remove packages, configure the board.  Read the [docs for more details](http://docs.novalabs.io)
 
 ## Requirements:
 
@@ -15,16 +12,9 @@ the [docs for more details](http://docs.novalabs.io)
 
 ## Installation and setup
 
-(If you don't want or can't install the tools on your own Linux OS, it
-is also possible to use
-the [prebuilt virtualbox image](nova_vbox_image.md); in this case, you
-can skip right to [Create a new workspace](#Create_a_new_workspace)).
+(If you don't want or can't install the tools on your own Linux OS, it is also possible to use the [prebuilt virtualbox image](nova_vbox_image.md); in this case, you can skip right to [Create a new workspace](#Create_a_new_workspace)).
 
-The installation is entirely automated.  First create a dedicated
-directory which will contain the Nova tools and the projects (in the
-following example it's a `nova` directory directly under the home
-directory; feel free to create it anywhere else), and then download
-and run the installation script:
+The installation is entirely automated.  First create a dedicated directory which will contain the Nova tools and the projects (in the following example it's a `nova` directory directly under the home directory; feel free to create it anywhere else), and then download and run the installation script:
 
 ```sh
 mkdir ~/nova
@@ -32,17 +22,13 @@ cd ~/nova
 wget -qO- http://get-core.novalabs.io/ | sh
 ```
 
-Remember, every time you open a new shell (e.g. open a new terminal
-window) you'll need to run the following command:
+Remember, every time you open a new shell (e.g. open a new terminal window) you'll need to run the following command:
 
 ```sh
 source ~/nova/core/setup.sh
 ```
 
-This will configure the currently running shell, and allow it to find
-the tools when you call them from the command-line.  Make sure you've
-run the above command if you see the following message when running,
-for example, the `CoreWorkspace.py` command:
+This will configure the currently running shell, and allow it to find the tools when you call them from the command-line.  Make sure you've run the above command if you see the following message when running, for example, the `CoreWorkspace.py` command:
 
 ```
 bash: CoreWorkspace.py: command not found...
@@ -50,10 +36,7 @@ bash: CoreWorkspace.py: command not found...
 
 ### Texane's stlink tool
 
-The better way of getting the `stlink` tools is to get the source code
-and compile it yourself.  Make sure some basic development tools are
-installed (they most likely are, if you've run Nova Core's
-installation script like in the above paragraph).
+The better way of getting the `stlink` tools is to get the source code and compile it yourself.  Make sure some basic development tools are installed (they most likely are, if you've run Nova Core's installation script like in the above paragraph).
 
 ```sh
 git clone https://github.com/texane/stlink
@@ -113,10 +96,7 @@ Ok, now the module was added. Let's ask the tools to generate the CMake project,
 CoreWorkspace.py generate
 ```
 
-Since you have a Makefile (under `build/debug/TARGET` or
-`build/release/TARGET`), you can use any text editor or IDE you want,
-but Eclipse is recommended: we've tested it and the tools have
-explicit support for it.
+Since you have a Makefile (under `build/debug/TARGET` or `build/release/TARGET`), you can use any text editor or IDE you want, but Eclipse is recommended: we've tested it and the tools have explicit support for it.
 
 ### Open a workspace with Eclipse
 
@@ -125,18 +105,11 @@ explicit support for it.
 - You might want to check that the *Search for Nested Projects* option is enabled
 - Finish
 
-Use the *Build All* command (CTRL+B) in order to compile
-everything. This will generate the executable file for your project in
-the **ELF** format in the `build/MODE/TARGET` directory, where `MODE`
-is either `debug` or `release`, and `TARGET` is the name of your
-module target (i.e. the board you're targeting, such as `imu`,
-`stepper`, ...).
+Use the *Build All* command (CTRL+B) in order to compile everything. This will generate the executable file for your project in the **ELF** format in the `build/MODE/TARGET` directory, where `MODE` is either `debug` or `release`, and `TARGET` is the name of your module target (i.e. the board you're targeting, such as `imu`, `stepper`, ...).
 
 ### Program the board
 
-Programming (transferring the program on the board) can be done using
-the following commands in the build directory (e.g. under the
-workspace, `build/debug/stepper`):
+Programming (transferring the program on the board) can be done using the following commands in the build directory (e.g. under the workspace, `build/debug/stepper`):
 
 ```bash
 # recompile everything, just to be sure
