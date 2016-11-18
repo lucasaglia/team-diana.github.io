@@ -12,6 +12,8 @@ rpi2:
 ssh USERNAME@rover.teamdiana.org 
 ```
 
+In order to access the server, see [ssh](ssh.md)
+
 An FTP server is hosted on rpi2. More information available [here](ftp_server_status.md)
 
 ## TK1

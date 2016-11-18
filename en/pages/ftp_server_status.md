@@ -19,4 +19,3 @@ Users must be member of the **ftpusers** group. They can be added with
 sudo usermod -aG ftpusers username
 ```
 
-

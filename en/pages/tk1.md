@@ -77,3 +77,8 @@ usermod -aG video archie
 sudo sha1sum -c /etc/nv_tegra_release
 ```
 
+## Notes
+
+```
+02-06-2016: installing ogre-1.8 without gl support, used a modified PKGBUILD
+```
