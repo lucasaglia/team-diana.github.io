@@ -4,9 +4,23 @@
 
 This wiki is created with [mdwiki](http://dynalon.github.io/mdwiki/#!index.md) and written in markdown.
 
-The repository is avaiable [here on github](https://github.com/team-diana/team-diana.github.io)
+The repository is available [here on github](https://github.com/team-diana/team-diana.github.io)
 
 You can edit or write new pages with any text editor, then submit your changes with a pull request.
+
+## prose.io
+
+You can edit this wiki using [prose.io](http://prose.io)
+
+For instance: 
+
+1. Go to http://prose.io/#team-diana/team-diana.github.io/tree/master/en/pages
+2. Choose a page to edit or add a new file (**NEW FILE** button)
+3. edit the page using markdown sintax (see [Markdown](this_wiki#Markdown))
+4. Click on the right save button in order to push the changes
+5. Add a short description of your changes
+
+
 
 ## Markdown
 
@@ -71,6 +85,3 @@ If you are a javascript programmer, you can improve mdwiki resolving these issue
 
 - [Dynamic Gimmicks load #163](https://github.com/Dynalon/mdwiki/issues/163)
 - Make the markdown parser ignore mathjax expressions
-
-
-

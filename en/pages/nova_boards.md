@@ -1,119 +1,85 @@
 # Nova Boards
 
-## How to program
+In order to develop on the Nova boards, the Nova Core tools must be properly installed and set up.  These tools allow you to create a new workspace, add/remove packages, configure the board.  Read the [docs for more details](http://docs.novalabs.io)
 
-### Requirements:
+## Requirements:
 
 - Linux (preferably ubuntu, but others are fine too)
 - Eclipse (preferably CDT version, downloadable [here](http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/mars2) )
-- **GNU ARM Eclipse** tools, downloadable from **Eclipse marketplace**
-* Python and some python packages
-* Texane STlink tool
-* Other tools (cmake)
+- **GNU ARM Eclipse** tools, downloadable from either the [site](http://gnuarmeclipse.github.io/) or the [Eclipse marketplace](https://marketplace.eclipse.org/content/gnu-arm-eclipse),
+- Python
+- [Texane STlink tool](https://github.com/texane/stlink) 
 
+## Installation and setup
 
-#### Python packages installation
+(If you don't want or can't install the tools on your own Linux OS, it is also possible to use the [prebuilt virtualbox image](nova_vbox_image.md); in this case, you can skip right to [Create a new workspace](#Create_a_new_workspace)).
 
-```bash
-# commands for ubuntu
-sudo apt-get install python-pip 
-sudo pip install argcomplete gitpython colorama avro tabulate
+The installation is entirely automated.  First create a dedicated directory which will contain the Nova tools and the projects (in the following example it's a `nova` directory directly under the home directory; feel free to create it anywhere else), and then download and run the installation script:
+
+```sh
+mkdir ~/nova
+cd ~/nova
+wget -qO- http://get-core.novalabs.io/ | sh
 ```
 
-****  Texane STlink tool
+Remember, every time you open a new shell (e.g. open a new terminal window) you'll need to run the following command:
 
-```bash
-sudo apt-get install git libusb-1.0-0 libusb-1.0-0-dev cmake
-git clone https://github.com/texane/stlink.git
+```sh
+source ~/nova/core/setup.sh
+```
+
+This will configure the currently running shell, and allow it to find the tools when you call them from the command-line.  Make sure you've run the above command if you see the following message when running, for example, the `CoreWorkspace.py` command:
+
+```
+bash: CoreWorkspace.py: command not found...
+```
+
+### Texane's stlink tool
+
+The better way of getting the `stlink` tools is to get the source code and compile it yourself.  Make sure some basic development tools are installed (they most likely are, if you've run Nova Core's installation script like in the above paragraph).
+
+```sh
+git clone https://github.com/texane/stlink
 cd stlink
 mkdir build
 cd build
 cmake ..
 make
 sudo make install
-cd ..
 sudo cp etc/udev/rules.d/* /etc/udev/rules.d/
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-
-#### other packages installation
-
-```bash
-# commands for ubuntu
-sudo apt-get install cmake
-```
-
-
-### Setup Nova tools 
-
-First, it is necessary to setup nova tools. These tools allow to create a new workspace, add/remove packages, configure the board and eventually write your firmware.
-Read the [docs for more details](http://docs.novalabs.io)
-
-A pre-created, ready to use, compressed directory was created in order to speed up the setup process. Follow [Setup Nova tools - A](#Setup_Nova_tools_A) in order to use the compressed 
-directory, otherwise follow [Setup Nova Tools - B](#Setup_Nova_tools_B)
-
-It is also possible to use the [prebuilt virtualbox image](nova_vbox_image.md). If you use the virtualbox image skip to [Create a new workspace](#Create_a_new_workspace)
-
-
-### Setup Nova tools A
-
-Download the latest directory from our [ftp_server](ftp://rover.teamdiana.org:2525/nova/)
-Currently, the latest compressed directory is named *nova-core-dist-20160616.tar.xz*
-In the terminal, uncompress it with:
-
-```bash
-# run this command where the file was downloaded. Change directory with cd
-tar -xvf nova-core-dist-20160616.tar.xz
-```
-
-The execute the *gensetup.sh* script
-
-```bash
-./gensetup.sh
-```
-
-This script created a new file, *setup.sh*, that must be loaded. 
-
-```bash
-# load the setup.sh file
-source setup.sh
-```
-
-
-### Setup Nova tools B
-
-**TODO: write this part**
-
-### Create a new workspace
+## Creating a new workspace
 
 Now let's create a workspace. The workspace contains your project code and configuration. You should have at least one workspace.
 
-**important:** Remember to load the *setup.sh* as specified above
+**Important:** Remember to load the `setup.sh` as specified above.
 
-important: There are two *setup.sh* files: one is in the nova installation directory. This file is needed to load nova tools. Another file is in the workspace and is generated using the following commands. Remember that when you want to work in the workspace you need to load the *setup.sh* file **in the workspace**
+**Important:** There are two `setup.sh` files: one is in the nova installation directory. This file is needed to load Nova tools. Another file with the same name is in the workspace and is generated using the following commands. Remember that when you want to work in the workspace you need to load the `setup.sh` file **in the workspace**.
 
 ```bash
-# Create a new directory for the workspace. This can be done everywhere
+# Create a new directory for the workspace. This can be done anywhere
 mkdir workspace
+cd workspace
 # Initialize the workspace
 CoreWorkspace.py initialize
 ```
 
-Once again, a *setup.sh* file was created. This file must be loaded **every time** you want to use this workspace
+Once again, a `setup.sh` file was created. This file must be loaded **every time** you want to use this workspace
 
-Now we add a new module to the workspace. A module is a particular board. The available module can be listed with:
+Now we add a new module to the workspace. A module is the support for a particular board. The available modules can be listed with:
 
 ```bash
 Core.py ls
 ```
 
-they appear under the **MODULES** section.
+They'll appear under the **MODULES** section.
 
 ### Add a module
 
-Let's add a **stepper** module for instance:
+Let's add a `stepper` module for instance:
 
 In the workspace directory:
 
@@ -121,46 +87,42 @@ In the workspace directory:
 # We are working in the workspace, so remember to source the setup.sh file
 source setup.sh
 # Now let's add the module
-CoreWorkspace.py module add stepper trial
+CoreWorkspace.py target add stepper trial
 ```
 
-Ok, now the module was added. Let's ask the tools to generate the eclipse and cmake project
+Ok, now the module was added. Let's ask the tools to generate the CMake project, along with a Makefile and an Eclipse project:
 
 ```bash
 CoreWorkspace.py generate
 ```
 
+Since you have a Makefile (under `build/debug/TARGET` or `build/release/TARGET`), you can use any text editor or IDE you want, but Eclipse is recommended: we've tested it and the tools have explicit support for it.
 
-Now we can open the project with eclipse. 
+### Open a workspace with Eclipse
 
-### Open a workspace with eclipse
-
-- File  Import... -> Existing Projects into Workspace 
+- File -> Import... -> Existing Projects into Workspace 
 - Select root directory: Browse to the workspace directory
+- You might want to check that the *Search for Nested Projects* option is enabled
 - Finish
 
-Use the Build All command (CTRL+B) in order to compile everything
-
-Everytime you compile a new **ELF** file is generated inside the build/ directory (Look for the module name)
-
-For instance, now we have generated a WORKSPACE/build/trial/trial **ELF** file
+Use the *Build All* command (CTRL+B) in order to compile everything. This will generate the executable file for your project in the **ELF** format in the `build/MODE/TARGET` directory, where `MODE` is either `debug` or `release`, and `TARGET` is the name of your module target (i.e. the board you're targeting, such as `imu`, `stepper`, ...).
 
 ### Program the board
 
-Programming can be done using the following commands
+Programming (transferring the program on the board) can be done using the following commands in the build directory (e.g. under the workspace, `build/debug/stepper`):
 
 ```bash
 # recompile everything, just to be sure
-make 
+make
 # transform the ELF file in a BIN file, suitable for programming
-arm-none-eabi-objcopy -O binary trial trial.bin 
+arm-none-eabi-objcopy -O binary trial trial.bin
 # flash the board
 st-flash write trial.bin 0x8000000
 ```
 
-The programmer should blink during the process. A correct flash procedure is indicated by a fixed green led on the programmer.
+The programmer should blink during the process. A correct flash procedure is indicated by a fixed green led on the programmer and a reassuring message on your terminal (*... jolly good!*).
 
-See [Nucleo ST-Link flash](#Nucleo_ST-Link_flash) for info on how to wire the board
+See [Nucleo ST-Link flash](#Nucleo_ST-Link_flash) for info on how to wire the board.
 
 ## Nucleo ST-Link flash
 
