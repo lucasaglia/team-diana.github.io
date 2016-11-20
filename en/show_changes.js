@@ -32,7 +32,6 @@ whenAvailable("$", function(t) {
   update_bar = function() {
 		bar = $("#load_progress_bar")
 		if(! download_done) {
-			console.info(curwidth)
 			if(curwidth > 99) {
 				show_error()		
 			} else {
@@ -46,10 +45,8 @@ whenAvailable("$", function(t) {
 });
 
 render_changes = function(jsonp) {
-  console.info("begin")
   res = Mustache.to_html($('#simple').html(), jsonp);
   $("#latest-changes").html(res);
-  console.info("end")
 };
 
 
@@ -60,7 +57,6 @@ whenAvailable("Mustache", function(t) {
     endpoint = "changes";
 
     on_changes_received = function(changes) {
-      console.info(changes);
       if($(changes).length < 1) {
         show_error()
         return

@@ -1,7 +1,39 @@
 
 # Server Status
 
-Currently three servers are available:
+---
+
+<div id="server_status"> 
+
+</div>
+
+
+---
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+
+
+<script src="./pages/server_status.js"></script>
+
+
+
+<script type="template" id="simple">
+  <h4> Currents status:</h4> 
+  
+	{{#servers}}
+	<div class="panel panel-default">
+    <div class="panel-heading"> {{name}} </div>
+    <div class="panel-body" id=>
+      ok: <span class="label" id={{name}}>{{on}}</span> 
+      </br>
+      {{desc}}
+    </div>
+
+	</div>
+	{{/servers}}
+</script>
+
 
 ```bash
 tk1:
@@ -103,3 +135,16 @@ COMMIT
 COMMIT
 # Completed on Tue May 24 06:59:52 2016
 ```
+
+## Available PORT
+
+Ports at polito are filtered. You can check non filtered port using this nmap command:
+
+```bash
+nmap rover.teamdiana.org -Pn -pRANGE_BEGIN-RANGE_END -d
+# where RANGE_BEGIN and #RANGE_END between 0 and 65535
+```
+
+All the port with status **closed** can be opened, **filtered** are filtered by the firewall and thus not available
+
+
