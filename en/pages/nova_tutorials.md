@@ -1,6 +1,13 @@
 # Tutorials NOVA
 
-## 1) Create a new workspace
+Official documentation from Nova Labs is available [here](http://docs.novalabs.io). Since the docs are currently (Nov 2016) somewhat sparse and lacking, we've collected some additional notes:
+
+- [Nova Core Middleware](./nova_mw.md)
+
+- [Nova Core Tools](./nova_tools.md)
+
+
+## Creating a new workspace
 
 - Make sure you have already loaded nova environment variables (using *source WORKSPACE/setup.sh*)
 
