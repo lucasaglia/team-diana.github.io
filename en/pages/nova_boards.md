@@ -2,6 +2,10 @@
 
 In order to develop on the Nova boards, the Nova Core tools must be properly installed and set up.  These tools allow you to create a new workspace, add/remove packages, configure the board.  Read the [docs for more details](http://docs.novalabs.io)
 
+## See also:
+
+[nova mw](nova_mw.md)
+
 ## Requirements:
 
 - Linux (preferably ubuntu, but others are fine too)
