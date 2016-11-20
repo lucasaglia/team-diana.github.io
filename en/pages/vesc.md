@@ -26,6 +26,19 @@ sudo apt-get install gcc-arm-none-eabi
 
 Checkout https://launchpad.net/gcc-arm-embedded/+announcement/13824 for more infos. 
 
+## Flashing VESC with ST-Link\V2
+
+In the VESC website is written to connect a programmer to the device in order to download the firmware. Any stm32 Nucleo boards can be used at this scope. The wires must be connected following these schematics:
+
+
+![Vesc_SWO_connector]({{site.baseurl}}/http://vedder.se/wp-content/uploads/2015/01/B_Modules-11-1024x724.png)
+
+![Stlink2 swd](/uploads/swd_nucleo_stlink2.png)
+
+Note: Vcc pin must be connected to a 3.3V voltage source, preferably the left PIN of connector **C1**
+
+Note: **CN2** Jumpers must be off (not connected)  
+
 
 ## See also:
 
