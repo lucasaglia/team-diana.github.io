@@ -181,6 +181,28 @@
 
 </head>
 <body>
+
+<!--show edit this page with prose button-->
+<script>
+add_edit_page_button = function() {
+  var a = $("#md-main-navbar").children()[1]
+  if(a == null) {
+    window.setTimeout(add_edit_page_button, 1000);
+  } else {
+    var b = $(a).children()
+    // http://prose.io/#team-diana/team-diana.github.io/edit/master/en/pages/ROS.md
+    // http://127.0.0.1:8080/en/#!index.md"
+    href = window.location.href
+    href = href.replace(window.location.origin, "")
+    href = href.replace("#!", "").substring(1)
+    prose_io_url = 'http://prose.io/#team-diana/team-diana.github.io/edit/master/' 
+     + href;
+    $(b).children().eq(1).after("<li><a href='" + prose_io_url +"'><b> Edit this page </b></a></li>");
+  }
+}
+add_edit_page_button()
+</script>
+
 <!--inline comments-->
 <script>
   disqus_shortname = 'team-diana-github';
@@ -195,6 +217,7 @@
     }, 3000);
   });
 </script>
+
     <noscript>
         This website requires Javascript to be enabled. Please turn on Javascript
         and reload the page.

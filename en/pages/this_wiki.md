@@ -14,6 +14,10 @@ You can edit this wiki using [prose.io](http://prose.io)
 
 For instance: 
 
+Click on the **Edit this page** button
+
+OR
+
 1. Go to http://prose.io/#team-diana/team-diana.github.io/tree/master/en/pages
 2. Choose a page to edit or add a new file (**NEW FILE** button)
 3. edit the page using markdown sintax (see [Markdown](this_wiki#Markdown))
