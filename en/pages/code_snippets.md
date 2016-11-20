@@ -5,12 +5,15 @@ These pages contain a list of most common code, that can be used without to have
 - [Python](python_code_snippets.md)
 - [C++](cpp_code_snippets.md)
 
+## Libraries
+
+* [OpenCV - C++](opencv_snippets.md)
+
 ## Configurations
 
 - [.launch files](launch_files_snippets.md)
 
 ## Tools
-
 
 - [Catkin](catkin_snippets.md)
 - [CMake](cmake_snippets.md)
