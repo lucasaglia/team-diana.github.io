@@ -102,7 +102,6 @@
 [Project]()
 
   * [Website](http://teamdiana.org/)
-  * [Status](pages/status.md)
   * [Server Status](pages/server_status.md)
   * [Getting Started](pages/getting_started.md)
   * [Roadmap](pages/roadmap.md)
