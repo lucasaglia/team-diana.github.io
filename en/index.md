@@ -40,7 +40,7 @@ For information about the team and news check out the [official team website](ht
   
 	{{#changes}}
 	<div class="panel panel-default">
-    <div class="panel-heading"> <a href='{{url}}'> {{author}} (see commit on github) </a></div>
+    <div class="panel-heading"> <a href='{{url}}'> {{author}} (see commit on github) - {{time}} </a></div>
 	 <ul class="list-group">
 		  {{#files}}
 				<li class="list-group-item">
