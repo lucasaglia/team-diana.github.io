@@ -109,3 +109,23 @@ ssh-add
 then copy-paste the previous lines (the output of the ssh-agent command) in **every** terminal where you intend to use 
 ssh.
 
+## Connect to a computer that uses dhcp
+
+You must set up a dns server on your computer, like dnsmasq:
+
+### dnsmasq
+
+Example configuration:
+
+```bash
+no-resolv
+# Set the local network device
+interface=enp2s0f1
+# Specify IP addresses in the format: first,last,lease_time
+dhcp-range=192.168.1.100,192.168.1.105,12h
+# Set the dns addressed to reply
+server=8.8.8.8
+server=8.8.4.4
+```
+
+Start the server, connect and reset the board. Checkout the log of dnsmasq for getting the address
