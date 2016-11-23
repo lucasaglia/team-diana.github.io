@@ -97,6 +97,7 @@ catkin_package(
   ...
 )
 
+# note: PROJECT_NAME must be replaced with the actual name of the project 
 add_dependencies(PROJECT_NAME PROJECT_NAME_msgs_generate_messages_cpp)
 
 
@@ -133,6 +134,9 @@ catkin_package(
 	CATKIN_DEPENDS message_runtime
 	...
 )
+
+add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
+
 ```
 
 ### package.xml
