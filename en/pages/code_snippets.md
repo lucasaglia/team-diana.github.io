@@ -18,3 +18,4 @@ These pages contain a list of most common code, that can be used without to have
 
 - [Catkin](catkin_snippets.md)
 - [CMake](cmake_snippets.md)
+- [Catkin package layout](catkin_package_layout_snippets.md)
