@@ -14,7 +14,9 @@ You can edit this wiki using [prose.io](http://prose.io)
 
 For instance: 
 
-Click on the **Edit this page** button
+Click on the **Edit this page** button 
+
+(Note that it may be required to presse the 'authorize' button in the lower-right corner of prose.io)
 
 OR
 
