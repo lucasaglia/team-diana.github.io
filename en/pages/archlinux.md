@@ -15,6 +15,17 @@ So install python2 and related packages (pip2, ipython2), then remember these no
 catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python2
 ```
 
+**Install a python package in python2 **
+```bash
+sudo pip2 install package_name
+```
+
+**Install a python package in python3 **
+```bash
+sudo pip install package_name
+```
+
+
 **Use python2 in this shell and childrens**
 
 ```bash
@@ -165,4 +176,3 @@ mk-ros-pkgbuild.py PACKAGE_NAME  ..
 ## Links
 
 [ROS Indigo - Arch Installation](http://wiki.ros.org/indigo/Installation/Arch)
-
