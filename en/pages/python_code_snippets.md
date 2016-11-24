@@ -45,4 +45,52 @@ if __name__ == '__main__':
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
 ```
+## Image Messages
 
+```python
+#!/usr/bin/env python
+import sys
+import rospy
+import cv2
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge, CvBridgeError
+
+from __future__ import print_function
+
+class image_converter:
+  def __init__(self):
+    self.image_pub = rospy.Publisher("image_topic_2",Image)
+    self.bridge = CvBridge()
+    self.image_sub = rospy.Subscriber("image_topic",Image,self.callback)
+
+  def callback(self,data):
+  	# Convert from ros Image msg to OpenCV image
+    try:
+      cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
+    except CvBridgeError as e:
+      print(e)
+
+	# Convert from OpenCV imae to ros Image msg
+    try:
+      ros_image_msg = self.bridge.cv2_to_imgmsg(cv_image, "bgr8")	
+      # remember to add stamp!
+      ros_image_msg.header.stamp = data.header.stamp
+      self.image_pub.publish(ros_image_msg)
+    except CvBridgeError as e:
+      print(e)
+
+def main(args):
+  ic = image_converter()
+  rospy.init_node('image_converter', anonymous=True)
+    rospy.spin()
+```
+
+### Compressed image message:
+
+```python
+from sensor_msgs.msg import CompressedImage
+
+def callback(ros_data):
+ 	np_arr = np.fromstring(ros_data.data, np.uint8)
+	image_cv = cv2.imdecode(np_arr, cv2.CV_LOAD_IMAGE_COLOR)     
+```
