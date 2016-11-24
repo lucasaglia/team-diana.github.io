@@ -26,6 +26,8 @@ cd ~/nova
 wget -qO- http://get-core.novalabs.io/ | sh
 ```
 
+Note: python2 is required, archlinux users should checkout [python2 vs python3](archlinux.md#python2_vs_python3)
+
 Remember, every time you open a new shell (e.g. open a new terminal window) you'll need to run the following command:
 
 ```sh
@@ -127,6 +129,56 @@ st-flash write trial.bin 0x8000000
 The programmer should blink during the process. A correct flash procedure is indicated by a fixed green led on the programmer and a reassuring message on your terminal (*... jolly good!*).
 
 See [Nucleo ST-Link flash](#Nucleo_ST-Link_flash) for info on how to wire the board.
+
+## Working with git
+
+
+The workspace can be shared with git. 
+
+### Pushing a new workspace online
+
+Inside the workspace main directory, init a new repository
+```bash
+git init
+```
+then, add a *.gitignore* file
+
+```bash
+*~
+.project
+build/
+generated/
+.cproject
+.project
+*.launch
+src/targets/*/CMakeLists.txt
+```
+
+
+then add the existing files, commit
+
+```bash
+git add -A 
+git commit -m 'first commit'
+```
+
+Also push the repo on github (create a new repo on github and follow the instructions
+
+### Cloning a workspace
+
+Use the suggested clone command from the github's repo page, such as
+
+```bash
+git clone git@github.com:team-diana/REPO_NAME.git
+```
+
+then, enter in the directory ( *cd REPO_NAME* ) and type
+
+```bash
+CoreWorkspace.py generate
+```
+
+in order to generate the Makefile and project files.
 
 ## Nucleo ST-Link flash
 
