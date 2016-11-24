@@ -7,6 +7,7 @@ These pages contain a list of most common code, that can be used without to have
 
 ## Libraries
 
+* [OpenCV - 2 VS 3](opencv_2vs3_snippets.md)
 * [OpenCV - C++](opencv_snippets.md)
 
 ## Configurations
