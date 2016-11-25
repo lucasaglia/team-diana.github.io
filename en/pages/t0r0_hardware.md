@@ -6,6 +6,8 @@
 
 ## [Arm Motors](t0r0_arm_motors.md)
 
+## [PSeye](pseye.md)
+
 ## [VESC](vesc.md)
 
 ## [Nova boards](nova_boards.md)
