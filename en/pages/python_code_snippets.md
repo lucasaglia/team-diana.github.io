@@ -92,5 +92,17 @@ from sensor_msgs.msg import CompressedImage
 
 def callback(ros_data):
  	np_arr = np.fromstring(ros_data.data, np.uint8)
-	image_cv = cv2.imdecode(np_arr, cv2.CV_LOAD_IMAGE_COLOR)     
+	image_cv = cv2.imdecode(np_arr, cv2.CV_LOAD_IMAGE_COLOR)    
 ```
+
+## rosparam
+```python
+rospy.get_param('/global_param_name')
+rospy.get_param('param_name')
+rospy.get_param('~private_param_name')
+rospy.get_param('foo', 'default_value')
+rospy.set_param('~private_bar', 1+2)
+rospy.delete_param('param_name')
+rospy.has_param('to_delete'):
+```
+
