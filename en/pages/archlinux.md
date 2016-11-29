@@ -45,6 +45,13 @@ fi
 export PATH=/tmp/bin:$PATH
 ```
 
+**Check python path:**
+
+```bash
+import sys; 
+print ('\n'.join(sys.path))
+```
+
 ## PKGBUILD
 
 When you want to install a ROS package in your system you can create a PKGBUILD using this script:
