@@ -196,3 +196,20 @@ Note: **CN2** Jumpers must be off (not connected)
 The 10-ping SWD Cortex header pins  on the board are similar to a **FFSD-05-D-12.00-01-N** connector. Two rows, 1.27mm pitch
 
 A compatible cable is	**FFSD-05-D-12.00-01-N**
+
+## EXPERIMENTAL: WINDOWS SUPPORT
+
+####Install the software packages
+
+1. Download the [Eclipse CDT](https://eclipse.org/cdt/downloads.php)
+	This version is standard eclipse with additional packages suitable for C/C++ development
+    Please select the 32 or 64 version depending on your computer and **java installation**.
+2. Install the [gcc-arm-none-eabi](https://launchpad.net/gcc-arm-embedded/+download)
+	This is a modified version of the **GCC** compiler that targets ARM processors. We will 
+    setup eclipse in order to use this version. It is often updated and it tracks the original GCC branch
+    Currently only the 32bit version is available.
+3. Install [Python **2.7**](https://www.continuum.io/downloads)
+	It is important to download the **2.7** version. The linked anaconda package is quiet good and contains 
+    python's **pip** package manager
+
+https://www.continuum.io/downloads
