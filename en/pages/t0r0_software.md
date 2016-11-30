@@ -1,6 +1,6 @@
 # T0R0 Software
 
-## [NOVA](nova.md)
+## [NOVA](nova_tutorials.md)
 
 ## RTOS
 
