@@ -4,7 +4,7 @@
 
 ## RTOS
 
--[MBED](mbed.md)
--[ChibiOS](chibios.md)
+- [MBED](mbed.md)
+- [ChibiOS](chibios.md)
 
 ## [ROS SYSTEM](ros.md)
