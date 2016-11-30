@@ -1,5 +1,7 @@
 # ROS SYSTEM
 
+Note: All the commands are referred to ubuntu
+
 ## Core
 
 [Installation instructions](http://wiki.ros.org/jade/Installation/UbuntuARM)
