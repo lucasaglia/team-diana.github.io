@@ -82,3 +82,14 @@ sudo sha1sum -c /etc/nv_tegra_release
 ```
 02-06-2016: installing ogre-1.8 without gl support, used a modified PKGBUILD
 ```
+
+## Enable USB 3.0 support
+In /boot/extlinux/extlinux.conf
+change:
+```
+usb_port_owner_info=0
+```
+to
+```
+usb_port_owner_info=2
+```
