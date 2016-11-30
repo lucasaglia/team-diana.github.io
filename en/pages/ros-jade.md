@@ -4,7 +4,7 @@
 
 [Installation instructions](http://wiki.ros.org/jade/Installation/UbuntuARM)
 
-## Ros Jade tools
+## Ros Jade nodes
 
 Warning:
 Remember to run roscore!
