@@ -36,14 +36,25 @@ Example of launch file:
 ## Tools
 
 ### Rostopic
-Tool for topics management
+Tool for topics' management
 
 #### Install:
 ```bash
 sudo apt-get install ros-jade-rostopic
 ```
 #### List all running topics:
-Run the command:
 ```bash
 rostopic list
+```
+
+### Topic_tools
+Tools for operations on topics
+
+#### Install:
+```bash
+sudo apt-get install ros-jade-topic-tools
+```
+#### Redirect data:
+```bash
+rosrun topic_tools relay <input_topic> <output_topic>
 ```
