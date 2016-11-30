@@ -8,11 +8,11 @@
 
 ### Cv_camera
 
-#### Installation:
+##### Install:
 ```bash
 sudo apt-get install ros-jade-cv-camera
 ```
-#### Running:
+##### Run:
 - Run the command:
 ```bash
 rosrun cv_camera cv_camera_node
