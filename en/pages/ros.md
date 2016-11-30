@@ -6,6 +6,9 @@
 
 ## Ros Jade tools
 
+Warning:
+Remember to run roscore!
+
 ### Cv_camera
 
 #### Install:
