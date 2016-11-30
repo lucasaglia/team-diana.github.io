@@ -8,7 +8,7 @@ Note: All the commands are referred to ubuntu
 
 ## Nodes
 
-### Cv_camera
+### **Cv_camera**
 Read data from camera or file
 
 #### Install:
@@ -35,7 +35,7 @@ Example of launch file:
 
 ## Tools
 
-### Rostopic
+### **Rostopic**
 Tool for topics' management
 
 #### Install:
@@ -47,7 +47,7 @@ sudo apt-get install ros-jade-rostopic
 rostopic list
 ```
 
-### Topic_tools
+### **Topic_tools**
 Tools for operations on topics
 
 #### Install:
