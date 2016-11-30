@@ -18,3 +18,14 @@ sudo apt-get install ros-jade-cv-camera
 rosrun cv_camera cv_camera_node
 ```
 - Use a launch file
+```bash
+roslaunch <file_name.launch>
+```
+Example of launch file:
+```xml
+<launch>
+        <node pkg="cv_camera" type="cv_camera_node" name="camera_input">
+                <param name="device_id" value="0"/>
+        </node>
+</launch>
+```
