@@ -1,15 +1,16 @@
 # ROS SYSTEM
 
-## Ros Jade core
+## Core
 
 [Installation instructions](http://wiki.ros.org/jade/Installation/UbuntuARM)
 
-## Ros Jade nodes
+## Nodes
 
 Warning:
 Remember to run roscore!
 
 ### Cv_camera
+Read data from camera or file
 
 #### Install:
 ```bash
@@ -31,4 +32,18 @@ Example of launch file:
                 <param name="device_id" value="0"/>
         </node>
 </launch>
+```
+## Tools
+
+### Rostopic
+Tool for topics management
+
+#### Install:
+```bash
+sudo apt-get install ros-jade-rostopic
+```
+#### List all running topics:
+Run the command:
+```bash
+rostopic list
 ```
