@@ -58,3 +58,16 @@ sudo apt-get install ros-jade-topic-tools
 ```bash
 rosrun topic_tools relay <input_topic> <output_topic>
 ```
+
+### **Image_view**
+Tool for image visualization
+
+#### Install:
+```bash
+sudo apt-get install ros-kinetic-image-view
+```
+
+#### Run:
+```bash
+rosrun image_view image_view image:=<topic_name>
+```
