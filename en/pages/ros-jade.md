@@ -6,9 +6,6 @@
 
 ## Nodes
 
-Warning:
-Remember to run roscore!
-
 ### Cv_camera
 Read data from camera or file
 
