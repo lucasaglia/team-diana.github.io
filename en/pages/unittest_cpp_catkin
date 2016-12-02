@@ -1,0 +1,63 @@
+# Unit Testing with C++ and Catkin
+
+## Google Test
+
+See also:
+ - [Google Test Primer](https://github.com/google/googletest/blob/master/googletest/docs/Primer.md)
+ 
+ 	It lists the macro that you can use for comparision
+
+### Directory structure:
+
+```bash
+package_name/
+	src/
+    include
+    	package_name
+    test/
+    	test1.cpp
+```
+
+### Test Source
+
+*test1.cpp*
+
+```c++
+#include <gtest/gtest.h>
+
+# Note: TestSuites are PascalCased, testCases are camelCased
+TEST(TestSuite, testCase1) {
+	
+}
+
+
+TEST(TestSuite, testCase2) {
+	
+}
+
+int main(int argc, char **argv) {
+  testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}
+```
+
+### CMakeLists.txt
+
+```
+// ...
+
+catkin_add_gtest(test1 test/test1.cpp)
+//catkin_add_gtest(test2 test/test2.cpp)
+
+
+
+// ...
+```
+
+### Troubleshooting
+
+In case you notice problems related to pthread, maybe you need to link against it:
+
+```
+target_link_libraries(${PROJECT_NAME}  ... pthread ... ) 
+```
