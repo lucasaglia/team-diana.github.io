@@ -5,6 +5,9 @@ These pages contain a list of most common code, that can be used without to have
 - [Python](python_code_snippets.md)
 - [C++](cpp_code_snippets.md)
 
+## Testing
+- [Boost Test, C++, Catkin](unittest_cpp_catkin.md)
+
 ## Libraries
 
 * [OpenCV - 2 VS 3](opencv_2vs3_snippets.md)
