@@ -64,7 +64,7 @@ Tool for image visualization
 
 #### Install:
 ```bash
-sudo apt-get install ros-kinetic-image-view
+sudo apt-get install ros-jade-image-view
 ```
 
 #### Run:
