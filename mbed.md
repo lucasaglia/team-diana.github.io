@@ -1,6 +1,5 @@
 # MBED
 
-
 ##Setup the development environment
 
 ###Windows
@@ -14,7 +13,6 @@
 	This is a modified version of the **GCC** compiler that targets ARM processors. We will 
     setup eclipse in order to use this version. It is often updated and it tracks the original GCC branch
     Currently only the 32bit version is available.
-    
 
 ####Open a Makefile project
 
@@ -29,5 +27,3 @@ Go to the online compiler, click with the right mouse button on the project dire
 ![mbed_export_gcc](export_gcc.png)
 
 NOTE: Make sure to select the **Also include repositories and other files** checkbox
-
- 
