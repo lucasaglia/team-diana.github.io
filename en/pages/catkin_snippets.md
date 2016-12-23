@@ -110,7 +110,6 @@ After having written a service file such as:
 * MyService.srv *
 ```bash
 string str
----
 bool result
 ```
 
