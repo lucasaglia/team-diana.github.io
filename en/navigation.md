@@ -26,6 +26,9 @@
   * [Rover](pages/amalia_rover.md)
   * [Hardware](pages/amalia_hardware.md)
   * [Misc Hardware](pages/other_hardware.md)
+  - - - -
+  * # Software
+  * [GUI](pages/gui.md)
 
 [T0-R0 Rover]()
 
@@ -60,8 +63,6 @@
   * [SLAM](pages/slam.md)
   * [Pathfinding](pages/pathfinding.md)
   * [Pathfinding - *Planning*](pages/pathfinding-planning.md)
-
-[GUI](pages/gui.md)
 
 [ROS](pages/ROS.md)
 
