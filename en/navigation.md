@@ -44,27 +44,6 @@
   - - - -
   * [Software](pages/t0r0_software.md)
 
-[Subsystems]()
-
-  * # IO
-  * [IO](pages/io.md)
-  - - - -
-  * # Powertrain
-  * [hlCANopen](pages/hlcanopen.md)
-  * [diana_powertrain](pages/diana_powertrain.md)
-  - - - -
-  * # Suspension
-  * [Controller](pages/suspension_controller.md)
-  - - - -
-  * # Vision
-  * [Cameras](pages/cameras.md)
-  * [Pantilt](pages/pantilt.md)
-  - - - -
-  * # Navigation
-  * [SLAM](pages/slam.md)
-  * [Pathfinding](pages/pathfinding.md)
-  * [Pathfinding - *Planning*](pages/pathfinding-planning.md)
-
 [Gazebo]()
 
   * [Gazebo](pages/gazebo.md)
