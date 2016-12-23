@@ -83,7 +83,6 @@
 
   * [Tutorial NOVA](pages/nova_tutorials.md)
   * [Rover first setup](pages/rover_first_setup.md)
-  * [Learning](pages/learning.md)
   - - - -
   * # Development
   * [Development guidelines](pages/development_guidelines.md)
@@ -104,17 +103,19 @@
   * # Distros
   * [Arch](pages/archlinux.md)
   * [Ubuntu](pages/ubuntu.md)
-  - - - -
-  * [This Wiki](pages/this_wiki.md)
 
 [Project]()
 
   * [Website](http://teamdiana.org/)
   * [Server Status](pages/server_status.md)
-  * [Getting Started](pages/getting_started.md)
   * [Roadmap](pages/roadmap.md)
   * [Accounts](pages/accounts.md)
 
+[Getting started]()
+  * [This Wiki](pages/this_wiki.md)
+  * [Quick start](pages/getting_started.md)
+  * [Learning](pages/learning.md)
+  * [Git](pages/git_getting_started.md)
 
 <!-- A more complex navigation example: ----------------------------------------
 
