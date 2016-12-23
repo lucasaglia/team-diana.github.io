@@ -30,7 +30,14 @@
 [T0-R0 Rover]()
 
   * [Rover](pages/t0r0_rover.md)
-  * [Hardware](pages/t0r0_hardware.md)
+  - - - -
+  * # Hardware
+  * [Nvidia Tk1](tk1.md)
+  * [Arm Motors](t0r0_arm_motors.md)
+  * [PSeye](pseye.md)
+  * [VESC](vesc.md)
+  * [Nova boards](nova_boards.md)
+  - - - -
   * [Software](pages/t0r0_software.md)
 
 [Subsystems]()
