@@ -24,6 +24,8 @@
 [Amalia Rover]()
 
   * [Rover](pages/amalia_rover.md)
+  - - - -
+  * # Hardware
   * [Hardware](pages/amalia_hardware.md)
   * [Misc Hardware](pages/other_hardware.md)
   - - - -
