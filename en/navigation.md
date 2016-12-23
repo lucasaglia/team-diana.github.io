@@ -14,13 +14,13 @@
 [gimmick:theme](spacelab)
 
 
-  <!--
-  -- Navigation
-  -- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
-  -->
+<!--
+-- Navigation
+-- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
+-->
 
-  [Home](index.md)
-  [ROS](pages/ROS.md)
+[Home](index.md)
+
 [Amalia Rover]()
 
   * [Rover](pages/amalia_rover.md)
@@ -32,6 +32,8 @@
   * [Rover](pages/t0r0_rover.md)
   * [Hardware](pages/t0r0_hardware.md)
   * [Software](pages/t0r0_software.md)
+
+[ROS](pages/ROS.md)
 
 [Subsystems]()
 
@@ -108,44 +110,44 @@
   * [Accounts](pages/accounts.md)
 
 
-  <!-- A more complex navigation example: ----------------------------------------
+<!-- A more complex navigation example: ----------------------------------------
 
 [Menu Item 1]()
 
   * # SubMenu Heading 1
   * [SubMenu Item 1](pages/subitem1.md)
-* [SubMenu Item 2](pages/subitem2.md)
+  * [SubMenu Item 2](pages/subitem2.md)
   - - - -
   * # SubMenu Heading 2
-* [SubMenu Item 3](pages/subitem3.md)
+  * [SubMenu Item 3](pages/subitem3.md)
   - - - -
   * # SubMenu Heading 3
-* [SubMenu Item 3](pages/subitem3.md)
+  * [SubMenu Item 3](pages/subitem3.md)
 
 [Menu Item 2](pages/item2.md)
 
 [Menu Item 3](pages/item3.md)
 
-  ---------------------------------------------------------------------------- -->
+---------------------------------------------------------------------------- -->
 
-  <!--
-  -- Change the Language
-  -- Could be useful when there's more than one language wiki.
-  -->
+<!--
+-- Change the Language
+-- Could be useful when there's more than one language wiki.
+-->
 
-  <!--
+<!--
 [Change the Language]()
 
   * [English (United States)](/en_US/)
   * [English (United Kingdom)](/en_GB/)
-* [Italian](/it/)
-  -->
+  * [Italian](/it/)
+-->
 
-  <!--
-  -- Let the user choose a theme
-  -- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
-  -->
+<!--
+-- Let the user choose a theme
+-- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
+-->
 
-  <!--
+<!--
 [gimmick:themechooser](Choose theme)
-  -->
+-->
