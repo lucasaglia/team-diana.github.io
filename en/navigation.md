@@ -29,6 +29,7 @@
   - - - -
   * # Software
   * [GUI](pages/gui.md)
+  * [Subsystems](amalia_subsystems.md)
 
 [T0-R0 Rover]()
 
