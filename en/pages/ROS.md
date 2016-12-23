@@ -8,5 +8,3 @@ Check out the [official project webpage](www.ros.org) for more info and details.
 
 ROS was developed by [Willow Garage](https://twitter.com/willowgarage) and its development is currently pushed forward by the [Open Source Robotics Foundation](http://www.osrfoundation.org/)
 
-## ROS and Team Diana
-
