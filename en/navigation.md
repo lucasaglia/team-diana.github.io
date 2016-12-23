@@ -59,7 +59,7 @@
   * [Getting started](pages/git_getting_started.md)
   * [Repositories](pages/git_repos.md)
 
-[Infrastructure]()
+[Dev Zone]()
 
   * [Tutorial NOVA](pages/nova_tutorials.md)
   * [Rover first setup](pages/rover_first_setup.md)
