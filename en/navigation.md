@@ -33,8 +33,6 @@
   * [Hardware](pages/t0r0_hardware.md)
   * [Software](pages/t0r0_software.md)
 
-[ROS](pages/ROS.md)
-
 [Subsystems]()
 
   * # IO
@@ -59,6 +57,8 @@
   * # Tools
 
 [GUI](pages/gui.md)
+
+[ROS](pages/ROS.md)
 
 [Gazebo]()
 
