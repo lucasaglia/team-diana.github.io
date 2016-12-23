@@ -64,8 +64,6 @@
   * [Pathfinding](pages/pathfinding.md)
   * [Pathfinding - *Planning*](pages/pathfinding-planning.md)
 
-[ROS](pages/ROS.md)
-
 [Gazebo]()
 
   * [Gazebo](pages/gazebo.md)
@@ -116,6 +114,7 @@
   * [This Wiki](pages/this_wiki.md)
   * [Quick start](pages/getting_started.md)
   * [Learning](pages/learning.md)
+  * [ROS](pages/ROS.md)
   * [Git](pages/git_getting_started.md)
 
 <!-- A more complex navigation example: ----------------------------------------
