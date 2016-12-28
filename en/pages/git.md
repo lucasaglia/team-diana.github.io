@@ -10,4 +10,4 @@ Follow the classic branching model:
 other branch follow the development of a new feature
 
 ##Links
-Team on github: [team-diana](https://github.com/team-diana)
+[Team DIANA on github](https://github.com/team-diana)
