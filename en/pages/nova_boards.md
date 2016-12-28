@@ -197,6 +197,16 @@ The 10-ping SWD Cortex header pins  on the board are similar to a **FFSD-05-D-12
 
 A compatible cable is	**FFSD-05-D-12.00-01-N**
 
+## The Boards
+
+### Stepper
+
+- [STM32F303](http://www.st.com/content/st_com/en/products/microcontrollers/stm32-32-bit-arm-cortex-mcus/stm32f3-series/stm32f303/stm32f303cb.html)
+
+### USB
+### GPS+IMU
+### BLDC
+
 ## EXPERIMENTAL: WINDOWS SUPPORT
 
 ####Install the software packages
