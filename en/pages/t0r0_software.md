@@ -9,3 +9,4 @@
 
 ## ROS SYSTEM
 - [Jade](ros-jade.md)
+- [Our nodes](rviz-plugins.md)
