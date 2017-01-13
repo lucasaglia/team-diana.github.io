@@ -10,7 +10,7 @@ Usage:
 - Select the tool "Distance" from the tool bar
 - Click on the point of interest
 
-## Display Distance
+### Display Distance
 A little space where distance from "Distance" tool is shown
 
 Usage:
