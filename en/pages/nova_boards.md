@@ -236,6 +236,38 @@ Chibi-OS is built on top of CMSIS-RTOS, adding a little extra layer.
 ### GPS+IMU
 ### BLDC
 
+## Logging and Debug 
+
+### ITM
+
+It is possible to perform real-time logging using the [ITM capabilities of ARM processors](https://www.arm.com/files/pdf/Serial_Wire_Debug.pdf) 
+
+This mechanism is faster that classical JTAG output and allows us to use the same connections used for programming the board (note: the **SWO** pin must be connected)
+
+For an example, check out the [nova_swd_output_example](https://github.com/team-diana/nova_swd_output_example) project. 
+
+The microcontroller can write to the SWO pin with this simple function:
+
+```c
+void SWV_puts(const char *s )
+{
+    while (*s) ITM_SendChar(*s++);
+}
+
+/// usage:
+SWV_puts("hello world\n");
+```
+
+The ITM_SendChar macro is provided by CMSIS.
+
+After having uploaded the firmware on the board, run openocd with the swo_on_file.openocd configuration:
+
+```bash
+openocd -f swo_on_file.openocd
+```
+
+the output will be written in swo.log:
+
 ## EXPERIMENTAL: WINDOWS SUPPORT
 
 ####Install the software packages
