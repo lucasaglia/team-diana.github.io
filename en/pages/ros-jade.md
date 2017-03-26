@@ -33,6 +33,14 @@ Example of launch file:
 </launch>
 ```
 
+### **Rtabmap**
+Node for SLAM and more
+
+#### Install:
+```bash
+ros-jade-rtabmap
+```
+
 ## Tools
 
 ### **Rostopic**

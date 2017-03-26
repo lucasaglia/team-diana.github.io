@@ -14,49 +14,37 @@
 [gimmick:theme](spacelab)
 
 
-  <!--
-  -- Navigation
-  -- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
-  -->
+<!--
+-- Navigation
+-- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
+-->
 
-  [Home](index.md)
-  [ROS](pages/ROS.md)
+[Home](index.md)
+
 [Amalia Rover]()
 
   * [Rover](pages/amalia_rover.md)
+  - - - -
+  * # Hardware
   * [Hardware](pages/amalia_hardware.md)
   * [Misc Hardware](pages/other_hardware.md)
+  - - - -
+  * # Software
+  * [GUI](pages/gui.md)
+  * [Subsystems](pages/amalia_subsystems.md)
 
 [T0-R0 Rover]()
 
   * [Rover](pages/t0r0_rover.md)
-  * [Hardware](pages/t0r0_hardware.md)
+  - - - -
+  * # Hardware
+  * [Nvidia Tk1](pages/tk1.md)
+  * [Arm Motors](pages/t0r0_arm_motors.md)
+  * [PSeye](pages/pseye.md)
+  * [VESC](pages/vesc.md)
+  * [Nova boards](pages/nova_boards.md)
+  - - - -
   * [Software](pages/t0r0_software.md)
-
-[Subsystems]()
-
-  * # IO
-  * [IO](pages/io.md)
-  - - - -
-  * # Powertrain
-  * [hlCANopen](pages/hlcanopen.md)
-  * [diana_powertrain](pages/diana_powertrain.md)
-  - - - -
-  * # Suspension
-  * [Controller](pages/suspension_controller.md)
-  - - - -
-  * # Vision
-  * [Cameras](pages/cameras.md)
-  * [Pantilt](pages/pantilt.md)
-  - - - -
-  * # Navigation
-  * [SLAM](pages/slam.md)
-  * [Pathfinding](pages/pathfinding.md)
-  * [Pathfinding - *Planning*](pages/pathfinding-planning.md)
-  - - - -
-  * # Tools
-
-[GUI](pages/gui.md)
 
 [Gazebo]()
 
@@ -71,11 +59,10 @@
   * [Getting started](pages/git_getting_started.md)
   * [Repositories](pages/git_repos.md)
 
-[Infrastructure]()
+[Dev Zone]()
 
   * [Tutorial NOVA](pages/nova_tutorials.md)
   * [Rover first setup](pages/rover_first_setup.md)
-  * [Learning](pages/learning.md)
   - - - -
   * # Development
   * [Development guidelines](pages/development_guidelines.md)
@@ -96,56 +83,60 @@
   * # Distros
   * [Arch](pages/archlinux.md)
   * [Ubuntu](pages/ubuntu.md)
-  - - - -
-  * [This Wiki](pages/this_wiki.md)
 
 [Project]()
 
   * [Website](http://teamdiana.org/)
   * [Server Status](pages/server_status.md)
-  * [Getting Started](pages/getting_started.md)
   * [Roadmap](pages/roadmap.md)
   * [Accounts](pages/accounts.md)
 
+[Getting started]()
 
-  <!-- A more complex navigation example: ----------------------------------------
+  * [This Wiki](pages/this_wiki.md)
+  * [Quick start](pages/getting_started.md)
+  * [Learning](pages/learning.md)
+  * [ROS](pages/ROS.md)
+  * [Git](pages/git_getting_started.md)
+
+<!-- A more complex navigation example: ----------------------------------------
 
 [Menu Item 1]()
 
   * # SubMenu Heading 1
   * [SubMenu Item 1](pages/subitem1.md)
-* [SubMenu Item 2](pages/subitem2.md)
+  * [SubMenu Item 2](pages/subitem2.md)
   - - - -
   * # SubMenu Heading 2
-* [SubMenu Item 3](pages/subitem3.md)
+  * [SubMenu Item 3](pages/subitem3.md)
   - - - -
   * # SubMenu Heading 3
-* [SubMenu Item 3](pages/subitem3.md)
+  * [SubMenu Item 3](pages/subitem3.md)
 
 [Menu Item 2](pages/item2.md)
 
 [Menu Item 3](pages/item3.md)
 
-  ---------------------------------------------------------------------------- -->
+---------------------------------------------------------------------------- -->
 
-  <!--
-  -- Change the Language
-  -- Could be useful when there's more than one language wiki.
-  -->
+<!--
+-- Change the Language
+-- Could be useful when there's more than one language wiki.
+-->
 
-  <!--
+<!--
 [Change the Language]()
 
   * [English (United States)](/en_US/)
   * [English (United Kingdom)](/en_GB/)
-* [Italian](/it/)
-  -->
+  * [Italian](/it/)
+-->
 
-  <!--
-  -- Let the user choose a theme
-  -- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
-  -->
+<!--
+-- Let the user choose a theme
+-- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
+-->
 
-  <!--
+<!--
 [gimmick:themechooser](Choose theme)
-  -->
+-->

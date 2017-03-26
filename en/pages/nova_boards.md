@@ -201,6 +201,76 @@ A compatible cable is	**FFSD-05-D-12.00-01-N**
 
 It is possible to use the [Nova Boards with KDevelop](nova_kdevelop.md)
 
+## The Boards
+
+[STM32F3, STM32F4 and STM32L4 Series Cortex®-M4 programming manual](http://www.st.com/content/ccc/resource/technical/document/programming_manual/6c/3a/cb/e7/e4/ea/44/9b/DM00046982.pdf/files/DM00046982.pdf/jcr:content/translations/en.DM00046982.pdf)
+
+### ARM Processors
+
+#### ARM Cortex M4
+
+STM32F3, STM32F4 are Cortex M4 processors
+
+[Cortex M4 Guide](http://infocenter.arm.com/help/topic/com.arm.doc.dui0553a/DUI0553A_cortex_m4_dgug.pdf)
+
+#### CMSIS
+
+CMSIS is a standard interface for the ARM Cortex processors. 
+
+*The CMSIS enables consistent device support and simple software interfaces to the processor and the peripherals, simplifying software re-use, reducing the learning curve for microcontroller developers, and reducing the time to market for new devices.*
+
+[CMSIS HTML Guide](http://www.keil.com/pack/doc/CMSIS/General/html/index.html)
+[CMSIS Duolos Tutorial](https://www.doulos.com/knowhow/arm/CMSIS/CMSIS_Doulos_Tutorial.pdf)
+
+#### CMSIS-RTOS
+
+CMSIS-RTOS is a full Real-Time OS based on CMSIS for the ARM Cortex processors.
+
+*The RTOS kernel can be used for creating applications that perform multiple tasks simultaneously. These tasks are executed by threads that operate in a quasi-parallel fashion.*
+
+Chibi-OS is built on top of CMSIS-RTOS, adding a little extra layer.
+
+[CMSIS-RTOS HTML GUIDE](http://www.keil.com/pack/doc/CMSIS/RTOS/html/index.html)
+
+### Stepper
+
+- [STM32F303CBT6](http://www.st.com/content/st_com/en/products/microcontrollers/stm32-32-bit-arm-cortex-mcus/stm32f3-series/stm32f303/stm32f303cb.html)
+
+### USB
+### GPS+IMU
+### BLDC
+
+## Logging and Debug 
+
+### ITM
+
+It is possible to perform real-time logging using the [ITM capabilities of ARM processors](https://www.arm.com/files/pdf/Serial_Wire_Debug.pdf) 
+
+This mechanism is faster that classical JTAG output and allows us to use the same connections used for programming the board (note: the **SWO** pin must be connected)
+
+For an example, check out the [nova_swd_output_example](https://github.com/team-diana/nova_swd_output_example) project. 
+
+The microcontroller can write to the SWO pin with this simple function:
+
+```c
+void SWV_puts(const char *s )
+{
+    while (*s) ITM_SendChar(*s++);
+}
+
+/// usage:
+SWV_puts("hello world\n");
+```
+
+The ITM_SendChar macro is provided by CMSIS.
+
+After having uploaded the firmware on the board, run openocd with the swo_on_file.openocd configuration:
+
+```bash
+openocd -f swo_on_file.openocd
+```
+
+the output will be written in swo.log:
 
 ## EXPERIMENTAL: WINDOWS SUPPORT
 
