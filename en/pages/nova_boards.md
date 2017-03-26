@@ -272,6 +272,126 @@ openocd -f swo_on_file.openocd
 
 the output will be written in swo.log:
 
+### Debug with openocd
+
+It is possible to debug with gdb using openocd interface. The guide is inspired from [this post](https://balau82.wordpress.com/2013/09/15/debugging-the-stm32-p152-board-with-gdb/)
+
+We will use two configuration file, one for openocd, one for gdb:
+
+*gdb_pipe.openocd*:
+
+```bash
+source [find interface/stlink-v2-1.cfg]
+source [find target/stm32f3x.cfg]
+
+gdb_port pipe
+log_output openocd.log
+
+$_TARGETNAME configure -event gdb-detach {
+ echo "Debugger detaching: resuming execution."
+ resume
+}
+```
+
+*gdb_pipe.gdb*:
+
+```bash
+target remote | openocd -f gdb_pipe.openocd
+monitor halt
+monitor gdb_sync
+stepi
+```
+
+You can then run gdb with:
+
+```bash
+arm-none-eabi-gdb -x gdb_pipe.gdb
+```
+
+### Debug with st-util
+
+It is also possible to debug the boards with gdb and st-util. You should already have all the available tools, indeed st-util comes with the same package of st-flash, while the **arm-none-eabi-gdb** executable comes with gcc for arm. 
+
+You need to start st-util first, with the board connected via st-linkv2:
+
+```bash
+st-util
+```
+
+the expected output is:
+
+```bash
+2017-03-26T10:36:57 INFO src/common.c: Loading device parameters....
+2017-03-26T10:36:57 INFO src/common.c: Device connected is: F3 device, id 0x10036422
+2017-03-26T10:36:57 INFO src/common.c: SRAM size: 0xa000 bytes (40 KiB), Flash: 0x20000 bytes (128 KiB) in pages of 2048 bytes
+2017-03-26T10:36:57 INFO src/gdbserver/gdb-server.c: Chip ID is 00000422, Core ID is  2ba01477.
+2017-03-26T10:36:57 INFO src/gdbserver/gdb-server.c: Listening at \*:4242...
+st-util 1.3.1
+```
+
+That **Listening at \*:4242** means that you can connect with gdb at localhost:4242:
+
+```bash
+# start arm version of gdb:
+arm-none-eabi-gdb
+# inside the gdb prompt, connect to the local server:
+remote target :4242
+# Note that gdb will complain that it cannot find an exacutable. 
+# Indeed now we can controll the processor, 
+# but we don't know how to associate memory addresses/instructions to the program. 
+# giving:
+list
+# we will get another complaint saying that the symbol table is not loaded.
+# in order to load it, we can use the file command
+file EXECUTABLE_NAME
+# EXECUTABLE_NAME must be the filename of the generated exacutable **before** stripping with objcopy. That is, the elf file. This file also contains debug information
+# we can then add breakpoint normally
+```
+
+## Compiling, Flashing and Debugging with Eclipse
+
+It is also possible to run all the previous command in eclipse.
+
+### Compiling
+
+Make sure that instead of **all**, the name of the executable ( **firmware.bin** in this case) appears. 
+So, when we will run make, the Makefile will regenerate the **.bin** file that can be flashed on the board
+
+![](/uploads/eclipse_nova_compiling1.png)
+
+### Flashing
+
+
+We can flash with st-flash. In Eclipse go to Run -> External Tools -> External Tools Configurations -> New launch configuration [new page icon] and put this variables: 
+
+![](/uploads/eclipse_nova_flashing1.png)
+
+- Location: this is the location of the st-flash program
+- Working Directory: this is the directory where the program will run. You can use the variable suggested by clicking on **Variables...**
+- Arguments: replace firmware.bin with the name of the generated executable (the same one used in the **Compiling** section)
+
+You can then run this configuration when you want to flash the firmware
+
+### Debugging
+
+It is also possible to run gdb and openocd inside eclipse for debugging. See also [this stackoverflow tutorial](http://stackoverflow.com/questions/38033130/how-to-use-the-gdb-gnu-debugger-and-openocd-for-microcontroller-debugging-fr) for the details.
+
+In order to do this:
+
+1. Go to Run -> Debug Configurations 
+2. Go to GDB OpenOCD Debugging, click on the new page icon (New launch Configuration)
+3. Insert the values reported in the following images:
+
+![](/uploads/eclipse_nova_debug1.png)
+
+![](/uploads/eclipse_nova_debug2.png)
+
+![](/uploads/eclipse_nova_debug3.png)
+
+Then you can run this debug configuration. The processor will stop once, you can resume it (F8) then it will stop at the next breakpoint. You can use eclipse to inspect values and step-in, step-over.
+
+
+
 ## EXPERIMENTAL: WINDOWS SUPPORT
 
 ####Install the software packages
