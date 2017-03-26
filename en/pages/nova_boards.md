@@ -197,6 +197,11 @@ The 10-ping SWD Cortex header pins  on the board are similar to a **FFSD-05-D-12
 
 A compatible cable is	**FFSD-05-D-12.00-01-N**
 
+## Kdevelop
+
+It is possible to use the [Nova Boards with KDevelop](nova_kdevelop.md)
+
+
 ## EXPERIMENTAL: WINDOWS SUPPORT
 
 ####Install the software packages
