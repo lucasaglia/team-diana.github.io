@@ -26,13 +26,29 @@ cd ~/nova
 wget -qO- http://get-core.novalabs.io/ | sh
 ```
 
-Note: python2 is required, archlinux users should checkout [python2 vs python3](archlinux.md#python2_vs_python3)
+Note: python3 is required
+
+NOTE: if you get a "ImportError: No module named novalabs.core.CoreBootstrap" make sure you install python3 and pip3 (sudo apt-get install python3 python3-pip) and before running the configuration source this file:
+
+```bash
+#!/bin/bash
+
+dir_name="/tmp/bin"
+rm -r $dir_name
+mkdir $dir_name
+ln -s /usr/bin/python3 $dir_name/python
+ln -s /usr/bin/python3-config $dir_name/python-config
+export PATH=/tmp/bin:$PATH
+export PYTHON_EXECUTABLE=/usr/bin/python3
+```
 
 Remember, every time you open a new shell (e.g. open a new terminal window) you'll need to run the following command:
 
 ```sh
 source ~/nova/core/setup.sh
 ```
+
+
 
 This will configure the currently running shell, and allow it to find the tools when you call them from the command-line.  Make sure you've run the above command if you see the following message when running, for example, the `CoreWorkspace.py` command:
 
