@@ -71,8 +71,7 @@ mkdir workspace
 cd workspace
 # Initialize the workspace
 CoreWorkspace.py initialize
-# Be sure that the python module "intelhex" was 
-installed; 
+# Be sure that the python module "intelhex" was installed; 
 # otherwise run: "sudo pip install intelhex"
 ```
 
