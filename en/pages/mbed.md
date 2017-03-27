@@ -29,8 +29,8 @@ WARNING: this method as of today (12/2016) is discouraged since the MBED online 
 It is possible to export an online project and open it in eclipse. 
 Go to the online compiler, click with the right mouse button on the project directory, select export -> GCC compiler, or, from the project page, click on **export to desktop IDE** 
 
-![mbed_export1](mbed-export1.png)
-![mbed_export_gcc](export_gcc.png)
+<!--![mbed_export1](/uploads/mbed-export1.png)-->
+<!--![mbed_export_gcc](/uploads/export_gcc.png)-->
 
 NOTE: Make sure to select the **Also include repositories and other files** checkbox
 
