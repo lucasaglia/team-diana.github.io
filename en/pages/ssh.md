@@ -2,7 +2,6 @@
 
 ssh is a tool that allow to connect to a remote computer with a secure connection.
 
-
 ## How To
 
 In order to use a remote computer with ssh, follow these step
@@ -14,7 +13,7 @@ In order to use a remote computer with ssh, follow these step
 
 WARNING: you can share your **public keys** (*~/.ssh/id_rsa.pub*) but do not show anyone your **private key**! (*~/.ssh/id_rsa*) 
 
-WARNING: your key must be password protected. If it is not, you will removed by the system administrator
+WARNING: your key must be password protected. If it is not, you will be removed by the system administrator
 
 - send the public key to the system administrator. Ask him to create a user with your username and 
 to add the public key in /home/USERNAME/.ssh/authorized_keys
@@ -30,7 +29,6 @@ ssh USERNAME@server_address
 you will be asked the password of your key. Insert it
 
 ### ssh-agent 
-
 
 inserting the key password every time you want to open a new shell is a waste of time. 
 ssh-agent allows to solve this problem.
@@ -52,4 +50,3 @@ ssh-add
 
 and insert the key. Once you type this command, you will not be asked your key password
 till the next computer restart.
-
