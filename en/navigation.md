@@ -40,7 +40,6 @@
   * # Hardware
   * [Nvidia Tk1](pages/tk1.md)
   * [Arm Motors](pages/t0r0_arm_motors.md)
-  * [PSeye](pages/pseye.md)
   * [VESC](pages/vesc.md)
   * [Nucleo STM32 boards](pages/stm32_nucleo.md)
   * [Nova boards](pages/nova_boards.md)
