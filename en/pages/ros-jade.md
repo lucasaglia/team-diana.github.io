@@ -38,7 +38,7 @@ Node for SLAM and more
 
 #### Install:
 ```bash
-ros-jade-rtabmap
+sudo apt-get install ros-jade-rtabmap
 ```
 
 ## Tools
