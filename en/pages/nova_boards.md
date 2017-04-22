@@ -354,7 +354,7 @@ That **Listening at \*:4242** means that you can connect with gdb at localhost:4
 # start arm version of gdb:
 arm-none-eabi-gdb
 # inside the gdb prompt, connect to the local server:
-remote target :4242
+target remote :4242
 # Note that gdb will complain that it cannot find an exacutable. 
 # Indeed now we can controll the processor, 
 # but we don't know how to associate memory addresses/instructions to the program. 
