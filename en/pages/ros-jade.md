@@ -1,6 +1,6 @@
 # ROS SYSTEM
 
-Note: All the commands are referred to ubuntu
+Note: All commands are referred to ubuntu
 
 ## Core
 
@@ -39,6 +39,15 @@ Node for SLAM and more
 #### Install:
 ```bash
 sudo apt-get install ros-jade-rtabmap
+```
+
+### **Rosserial**
+Node that connect a serial device to Ros
+
+#### Use:
+Flash un the device the client, than run the host:
+```bash
+rosrun rosserial_python serial_node.py </dev/tty...>
 ```
 
 ## Tools
