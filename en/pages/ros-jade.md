@@ -45,7 +45,7 @@ sudo apt-get install ros-jade-rtabmap
 Node that connect a serial device to Ros
 
 #### Use:
-Flash un the device the client, than run the host:
+Flash on the device the client, than run the host:
 ```bash
 rosrun rosserial_python serial_node.py </dev/tty...>
 ```
