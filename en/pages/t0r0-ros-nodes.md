@@ -17,11 +17,11 @@ Usage:
 - Open the pannel from the pannel menu
 - Use "Distance" tool as shown
 
-## Joystick
+## joystick
 Firmware to be flashed on Arduino
 
 Usage:
-- Download the T0R0DrivingTools repository
+- Download the **T0R0DrivingTools** repository
 - Open the **joystick** project with the Arduino ide
 - Compile and flash it on the Arduino shield connected to the joistick
 - Run the **rosserial** node
@@ -30,7 +30,7 @@ Usage:
 A simple GUI for T0R0
 
 Usage:
-- Download the T0R0DrivingTools repository
+- Download the **T0R0DrivingTools** repository
 - Copy the **t0r0_driving_gui** directory in your <catkin_workspace>/src
 - Compile
 - Run ```rosrun t0r0_driving_gui gui```
@@ -39,6 +39,6 @@ Usage:
 The main node of the driving system
 
 Usage:
-- Download the t0r0_driving_core repository in your <catkin_workspace>/src
+- Download the **t0r0_driving_core** repository in your <catkin_workspace>/src
 - Compile
 - Run ```rosrun t0r0_driving_core core```
