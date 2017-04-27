@@ -20,7 +20,7 @@ Usage:
 ## Joystick
 Firmware to be flashed on Arduino
 
-### Usage:
+Usage:
 - Download the T0R0DrivingTools repository
 - Open the **joystick** project with the Arduino ide
 - Compile and flash it on the Arduino shield connected to the joistick
@@ -29,16 +29,16 @@ Firmware to be flashed on Arduino
 ## t0r0_driving_gui
 A simple GUI for T0R0
 
-### Usage:
+Usage:
 - Download the T0R0DrivingTools repository
 - Copy the **t0r0_driving_gui** directory in your <catkin_workspace>/src
 - Compile
-- Run ```bash rosrun t0r0_driving_gui gui ```
+- Run ```rosrun t0r0_driving_gui gui```
 
 ## t0r0_driving_core
 The main node of the driving system
 
-### Usage:
+Usage:
 - Download the t0r0_driving_core repository in your <catkin_workspace>/src
 - Compile
-- Run ```bash rosrun t0r0_driving_core core ```
+- Run ```rosrun t0r0_driving_core core```
