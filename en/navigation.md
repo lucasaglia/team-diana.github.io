@@ -44,7 +44,7 @@
   * [Nova boards](pages/nova_boards.md)
   - - - -
   * # Software
-  * [ROS System](t0r0-ros-system.md)
+  * [ROS System](pages/t0r0-ros-system.md)
 
 [Gazebo]()
 
