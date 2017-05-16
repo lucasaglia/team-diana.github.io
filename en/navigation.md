@@ -27,7 +27,6 @@
   - - - -
   * # Hardware
   * [Hardware](pages/amalia_hardware.md)
-  * [Misc Hardware](pages/other_hardware.md)
   - - - -
   * # Software
   * [GUI](pages/gui.md)
@@ -44,7 +43,8 @@
   * [Nucleo STM32 boards](pages/stm32_nucleo.md)
   * [Nova boards](pages/nova_boards.md)
   - - - -
-  * [Software](pages/t0r0_software.md)
+  * # Software
+  * [ROS System](t0r0-ros-system.md)
 
 [Gazebo]()
 
