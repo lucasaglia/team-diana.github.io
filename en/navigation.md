@@ -61,28 +61,25 @@
 
 [Dev Zone]()
 
-  * [Tutorial NOVA](pages/nova_tutorials.md)
-  * [Rover first setup](pages/rover_first_setup.md)
+  * [**Development guidelines**](pages/development_guidelines.md)
   - - - -
   * # Development
-  * [Development guidelines](pages/development_guidelines.md)
-  * [Continous Integration](pages/continous_integration.md)
   * [Code Snippets](pages/code_snippets.md)
   * [Datasets](pages/datasets.md)
   * [Docker](pages/docker.md)
-  * [Matlab](pages/matlab.md)
   * [Scripts](pages/scripts.md)
   * [Remote ROS connection](pages/remote.md)
   * [Remote development](pages/remote_development.md)
-  * [Useful stuff](pages/useful_stuff.md)
-  - - - -
-  * # Tools
-  * [RViz](pages/rviz.md)
   * [Catkin](pages/catkin.md)
+  * [Tutorial NOVA](pages/nova_tutorials.md)
   - - - -
   * # Distros
   * [Arch](pages/archlinux.md)
   * [Ubuntu](pages/ubuntu.md)
+  - - - -
+  * # RTOS
+  * [Mbed](pages/mbed.md)
+  * [Chibios](pages/chibios.md)
 
 [Project]()
 
@@ -96,7 +93,6 @@
   * [This Wiki](pages/this_wiki.md)
   * [Quick start](pages/getting_started.md)
   * [Learning](pages/learning.md)
-  * [ROS](pages/ROS.md)
   * [Git](pages/git_getting_started.md)
 
 <!-- A more complex navigation example: ----------------------------------------
