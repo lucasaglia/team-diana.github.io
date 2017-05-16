@@ -6,6 +6,8 @@ Note: All commands are referred to ubuntu
 
 [Installation instructions](http://wiki.ros.org/jade/Installation/UbuntuARM)
 
+- - - -
+
 ## Nodes
 
 ### **Cv_camera**
@@ -50,6 +52,8 @@ Flash the client program on the device, than run the host:
 rosrun rosserial_python serial_node.py </dev/tty...>
 ```
 
+- - - -
+
 ## Tools
 
 ### **Rostopic**
@@ -88,6 +92,8 @@ sudo apt-get install ros-jade-image-view
 ```bash
 rosrun image_view image_view image:=<topic_name>
 ```
+
+- - - -
 
 ## Our nodes
 
