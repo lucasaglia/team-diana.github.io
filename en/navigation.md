@@ -1,23 +1,6 @@
-<!--
--- Name of your wiki
--- Do NOT remove the leading `#` character.
--->
-
 # Team Diana Wiki
 
-
-<!--
--- Default theme
--- (Read: http://dynalon.github.io/mdwiki/#!customizing.md#Theme_chooser)
--->
-
 [gimmick:theme](spacelab)
-
-
-<!--
--- Navigation
--- (Read: http://dynalon.github.io/mdwiki/#!quickstart.md#Adding_a_navigation)
--->
 
 [Home](index.md)
 
@@ -37,11 +20,7 @@
   * [Rover](pages/t0r0_rover.md)
   - - - -
   * # Hardware
-  * [Nvidia Tk1](pages/tk1.md)
-  * [Arm Motors](pages/t0r0_arm_motors.md)
   * [VESC](pages/vesc.md)
-  * [Nucleo STM32 boards](pages/stm32_nucleo.md)
-  * [Nova boards](pages/nova_boards.md)
   - - - -
   * # Software
   * [ROS System](pages/t0r0-ros-system.md)
@@ -55,7 +34,6 @@
 
 [Git]()
 
-  * [Git](pages/git.md)
   * [Getting started](pages/git_getting_started.md)
   * [Repositories](pages/git_repos.md)
 
@@ -66,7 +44,6 @@
   * # Development
   * [Code Snippets](pages/code_snippets.md)
   * [Datasets](pages/datasets.md)
-  * [Docker](pages/docker.md)
   * [Scripts](pages/scripts.md)
   * [Remote ROS connection](pages/remote.md)
   * [Remote development](pages/remote_development.md)
