@@ -10,6 +10,6 @@ Node: gui
 
 ## New git repos
 * If it's a ros package follow the "New ros packages" instructions
-* If it's a repo containing code for a specified rover use the name <rover_name>_<repo_name>
+* If it's a repo containing code for a specified rover use the name \<rover_name>\<repo_name>
 * If it's a general repo use a useful name
 * **Remember the Readme.md file**, it's very useful for other team members
